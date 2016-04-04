@@ -16,7 +16,7 @@ fi
 
 cp $cudfpath $volume/$cudf
 
-sudo docker run -v $volume:/mnt/cudf -i rdicosmo/aspcud:v1 aspcud /mnt/cudf/$cudf /mnt/cudf/$solution "$criteria"
+docker run -v $volume:/mnt/cudf -i rdicosmo/aspcud:v1 aspcud /mnt/cudf/$cudf /mnt/cudf/$solution "$criteria"
 
 cp $volume/$solution $solutionpath
 
